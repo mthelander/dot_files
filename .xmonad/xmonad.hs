@@ -9,7 +9,7 @@ main = do
 xmproc <- spawnPipe "/usr/bin/xmobar /home/mjthelander/.xmobarrc"
 xmonad $ defaultConfig
     { modMask = mod4Mask -- Use Super instead of Alt
-    , terminal = "gnome-terminal"
+    , terminal = "terminator"
     , manageHook = manageDocks <+> manageHook defaultConfig
     , layoutHook = avoidStruts  $  layoutHook defaultConfig
     } `additionalKeys`
