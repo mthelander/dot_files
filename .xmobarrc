@@ -9,8 +9,15 @@ Config { font = "xft:inconsolata:size=10:antialias=true"
                     , Run Date "<fc=#93a1a1>%a %b %_d %Y %H:%M</fc>" "date" 10
                     , Run DiskIO [("/", "IO: <total>"), ("sda4", "<total>")] [] 10
                     , Run StdinReader
+                    , Run BatteryP ["BAT0"]
+                      ["-t", "<acstatus><watts> (<left>%)",
+                       "-L", "10", "-H", "80", "-p", "3",
+                       "--", "-O", "<fc=green>On</fc> - ", "-o", "",
+                       "-L", "-15", "-H", "-5",
+                       "-l", "red", "-m", "yellow", "-h", "green"]
+                      600
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%cpu% }{ %memory%  %wlan0%  %diskio%  %date%"
+       , template = "%cpu% }{ %memory%  %wlan0%  %diskio% %battery%  %date%"
        }
