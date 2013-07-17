@@ -21,7 +21,3 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-setxkbmap -option ctrl:nocaps
-xloadimage -onroot ~/Pictures/xubuntu-karmic.png
