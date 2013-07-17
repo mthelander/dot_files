@@ -120,6 +120,18 @@ GREEN="\[\033[0;32m\]"
 #PS1="$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ "
 
 export EXTHOME=~/.local/share/gnome-shell/extensions
+export EDITOR=vim
+export PSQL_EDITOR=vim
+export emacs='emacs -w'
+export grep='grep --color=auto'
+
+function gitopen() {
+    if [ -z $1 ]; then # Open all changed files
+        eval "$EDITOR \$(git status --porcelain --untracked-files=all | sed -re 's/^.+\s//')"
+    else # All files changed in the last number of specified commits
+        eval "$EDITOR \$(git show -$1 --name-only --oneline | sed -re '/\s/d')"
+    fi
+}
 
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
