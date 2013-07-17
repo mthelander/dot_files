@@ -1,5 +1,10 @@
 # .xsession
-xloadimage -onroot -fullscreen ~/Pictures/xubuntu-karmic.png &
+xloadimage -onroot -fullscreen -tile ~/Downloads/haskell-pattern.png &
 xrdb -merge .Xresources &
+
 setxkbmap -option ctrl:nocaps &
-$HOME/bin/xmonad
+
+eval `ssh-agent`
+xterm -e ssh-add
+
+/usr/bin/xmonad
