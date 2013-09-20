@@ -19,6 +19,7 @@ main = do
       , logHook         = ewmhDesktopsLogHook
       , handleEventHook = ewmhDesktopsEventHook
       , startupHook     = ewmhDesktopsStartup
+      , focusedBorderColor = "#268bd2"
       , layoutHook      = avoidStruts $ layoutHook defaultConfig
       } `additionalKeys`
       [ ((0,        xF86XK_AudioLowerVolume), spawn "amixer set Master 2-")
