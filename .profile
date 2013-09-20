@@ -20,4 +20,5 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
-export PATH="$HOME/.rbenv/bin:$PATH"
+
+export `gnome-keyring-daemon --start`
