@@ -1,4 +1,4 @@
-(add-to-list 'load-path "/home/mjthelander/.emacs.d")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 
 ; Set the color theme
 (cond ((> emacs-major-version 22)
@@ -77,7 +77,7 @@
  '(sml/folder ((t (:foreground "seagreen")))))
 
 ; Setup scala-mode
-;(add-to-list 'load-path "/home/mjthelander/scala-dist/tool-support/src/emacs")
+;(add-to-list 'load-path (expand-file-name "~/scala-dist/tool-support/src/emacs"))
 ;(require 'scala-mode-auto)
 
 ; centered cursor mode
@@ -99,14 +99,13 @@
 ; end
 
 ; Setup smart-mode-line
-(add-to-list 'load-path "/home/mthelander/.emacs.d/smart-mode-line")
 (require 'smart-mode-line)
 (if after-init-time (sml/setup)
   (add-hook 'after-init-hook 'sml/setup))
 
 ; SLIME mode
 (setq inferior-lisp-program scheme-program-name)
-(add-to-list 'load-path "/home/mjthelander/.emacs.d/slime-2013-04-05")
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/slime-2013-04-05"))
 
 ; Suggested by mit-scheme-swank
 (when (require 'slime nil t)
