@@ -26,7 +26,10 @@
 (show-paren-mode 1)
 (setq show-paren-mode-delay 0)
 
-; Imitate vim's sweet sweet ctrl-y command
+; Leave search highlighting on like vim does.
+(setq lazy-highlight-cleanup nil)
+
+; imitate vim's sweet sweet ctrl-y command
 (autoload 'copy-from-above-command "misc"
     "Copy characters from previous nonblank line, starting just above point.
 ##
