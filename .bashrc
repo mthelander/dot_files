@@ -2,9 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# Path
-export PATH=$HOME/.bin/:/usr/local/bin:$HOME/.rbenv/bin:$PATH
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -43,12 +40,12 @@ force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -72,8 +69,6 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -117,13 +112,9 @@ RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 
-#PS1="$RED\$(date +%H:%M) \w$YELLOW \$(parse_git_branch)$GREEN\$ "
-
 export EXTHOME=~/.local/share/gnome-shell/extensions
 export EDITOR=vim
 export PSQL_EDITOR=vim
-export emacs='emacs -w'
-export grep='grep --color=auto'
 
 function gitopen() {
     if [ -z $1 ]; then # Open all changed files
@@ -133,6 +124,7 @@ function gitopen() {
     fi
 }
 
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Open in $EDITOR all files with merge conflicts
+function gitmergeopen() {
+    eval "$EDITOR \$(git diff --name-status --diff-filter=U | sed -re 's/^.+\s//')"
+}
