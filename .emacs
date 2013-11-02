@@ -11,12 +11,18 @@
 (setq scroll-preserve-screen-position t)
 (mouse-wheel-mode -1)
 
+; Leave search highlighting on, like vim does
+(setq lazy-highlight-cleanup nil)
+
 ; Make page-[up|down] scroll only 1/2 page at a time
+
+(defvar *scroll-height* (/ (window-height (selected-window)) 2))
+
 (global-set-key [(control ?v)]
-  (lambda () (interactive (next-line (/ (window-height (selected-window)) 2)))))
+		(lambda () (interactive (scroll-up *scroll-height*))))
 
 (global-set-key [(meta ?v)]
-  (lambda () (interactive (previous-line (/ (window-height (selected-window)) 2)))))
+		(lambda () (interactive (scroll-down *scroll-height*))))
 
 ; No toolbars!
 (tool-bar-mode -1)
