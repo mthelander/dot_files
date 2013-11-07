@@ -1,1 +1,1 @@
-(load-option 'format) (load "/home/mjthelander/.emacs.d/mit-scheme-swank/swank.scm" (->environment '(runtime swank)))
+(load-option 'format) (load "~/.emacs.d/mit-scheme-swank/swank.scm" (->environment '(runtime swank)))
