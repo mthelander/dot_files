@@ -151,3 +151,9 @@
             slime-lisp-implementations)))
   (setq slime-default-lisp 'mit-scheme)
   (add-hook 'scheme-mode-hook 'mit-scheme-slime-mode-init))
+
+; Setup git-gutter
+(cond ((> emacs-major-version 22)
+       (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-git-gutter"))
+       (require 'git-gutter)
+       (global-git-gutter-mode +1)))
