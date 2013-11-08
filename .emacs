@@ -1,8 +1,14 @@
 (add-to-list 'load-path (expand-file-name "~/.emacs.d"))
 
 ; Set the color theme
-(cond ((> emacs-major-version 22)
-       (load-theme 'tango-dark)))
+(cond ((> emacs-major-version 23)
+       (load-theme 'tango-dark))
+      (t (add-to-list 'load-path (expand-file-name "~/.emacs.d/color-theme-6.6.0/"))
+	    (require 'color-theme)
+	    (eval-after-load "color-theme"
+	      '(progn
+		 (color-theme-initialize)
+		 (color-theme-charcoal-black-custom)))))
 
 ; Tweak default scroll behavior
 (scroll-bar-mode -1)
