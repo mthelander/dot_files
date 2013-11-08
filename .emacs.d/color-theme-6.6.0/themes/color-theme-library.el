@@ -13989,6 +13989,7 @@ Created by Dave Benjamin <ramen@ramenfest.com> Dec 23 2005."
        (cperl-array-face ((t (:bold t :foreground "#33DEDF"))))
        (cperl-hash-face ((t (:bold t :foreground "#33DEDF"))))
        (cperl-nonoverridable-face ((t (:foreground "SkyBlue"))))
+       (minibuffer-prompt ((t (:foreground "white"))))
        ))))
 
 (provide 'color-theme-ron)
