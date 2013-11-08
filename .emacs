@@ -8,7 +8,7 @@
 	    (eval-after-load "color-theme"
 	      '(progn
 		 (color-theme-initialize)
-		 (color-theme-charcoal-black-custom)))))
+		 (color-theme-ron)))))
 
 ; Tweak default scroll behavior
 (scroll-bar-mode -1)
@@ -161,3 +161,6 @@
 ; Coffeescript mode
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/coffee-mode"))
 (require 'coffee-mode)
+
+; Perl mode
+(defalias 'perl-mode 'cperl-mode)

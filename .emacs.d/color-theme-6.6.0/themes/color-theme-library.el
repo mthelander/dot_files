@@ -13970,7 +13970,7 @@ Created by Dave Benjamin <ramen@ramenfest.com> Dec 23 2005."
         (*gold*        "gold"))
     (color-theme-install
      '(color-theme-ron
-       ((background-color . "#AD7FA8")
+       ((background-color . "color16")
         (foreground-color . "#FFFFFF")
         (background-mode . dark)
         (border-color . "#323232")
@@ -13981,11 +13981,14 @@ Created by Dave Benjamin <ramen@ramenfest.com> Dec 23 2005."
        (font-lock-comment-face ((t (:foreground "#08FFAF"))))
        (font-lock-constant-face ((t (:foreground "#AD7FA8"))))
        (font-lock-builtin-face ((t (:foreground "#F000DF"))))
-       (font-lock-function-name-face ((t (:foreground "#33DEDF"))))
-       (font-lock-variable-name-face ((t (:foreground "#33DEDF"))))
+       (font-lock-function-name-face ((t (:bold t :foreground "#33DEDF"))))
+       (font-lock-variable-name-face ((t (:bold t :foreground "#33DEDF"))))
        (font-lock-keyword-face ((t (:foreground "gold"))))
        (font-lock-string-face ((t (:foreground "#AD7FA8"))))
-       (font-lock-type-face ((t (:foreground "#33DEDF"))))
+       (font-lock-type-face ((t (:bold t :foreground "#33DEDF"))))
+       (cperl-array-face ((t (:bold t :foreground "#33DEDF"))))
+       (cperl-hash-face ((t (:bold t :foreground "#33DEDF"))))
+       (cperl-nonoverridable-face ((t (:foreground "SkyBlue"))))
        ))))
 
 (provide 'color-theme-ron)
