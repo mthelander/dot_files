@@ -157,3 +157,7 @@
        (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-git-gutter"))
        (require 'git-gutter)
        (global-git-gutter-mode +1)))
+
+; Coffeescript mode
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/coffee-mode"))
+(require 'coffee-mode)
