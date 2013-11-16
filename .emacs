@@ -164,3 +164,8 @@
 
 ; Perl mode
 (defalias 'perl-mode 'cperl-mode)
+
+; Rainbow delimiters
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/rainbow-delimiters"))
+(require 'rainbow-delimiters)
+(global-rainbow-delimiters-mode)
