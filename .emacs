@@ -30,6 +30,25 @@
 (global-set-key [(meta ?v)]
 		(lambda () (interactive (scroll-down *scroll-height*))))
 
+;; (defun scroll-down-in-place (n)
+;;   (interactive "p")
+;;   (previous-line n)
+;;   (unless (eq (window-start) (point-min))
+;;     (scroll-down n)))
+
+;; (defun scroll-up-in-place (n)
+;;   (interactive "p")
+;;   (next-line n)
+;;   (unless (eq (window-end) (point-max))
+;;     (scroll-up n)))
+
+;; (global-set-key "\M-n" 'scroll-up-in-place)
+;; (global-set-key "\M-p" 'scroll-down-in-place)
+;; (global-set-key [(control ?v)]
+;; 		(lambda () (interactive (scroll-up-in-place *scroll-height*))))
+;; (global-set-key [(meta ?v)]
+;; 		(lambda () (interactive (scroll-down-in-place *scroll-height*))))
+
 ; No toolbars!
 (tool-bar-mode -1)
 (menu-bar-mode -1)
@@ -89,7 +108,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(sml/folder ((t (:foreground "seagreen")))))
+ '(sml/client ((t (:inherit default))))
+ '(sml/filename ((t (:inherit sml/global :foreground "brightcyan" :weight bold))))
+ '(sml/folder ((t (:foreground "brightcyan")))))
 
 ; Setup scala-mode
 ;(add-to-list 'load-path (expand-file-name "~/scala-dist/tool-support/src/emacs"))
