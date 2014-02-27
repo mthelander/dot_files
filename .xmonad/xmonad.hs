@@ -28,5 +28,6 @@ main = do
       , ((mod4Mask, xK_m                   ), spawn "dmenu_run -b -nb 'black' -nf '#17c200' -sb '#079dad'")
       , ((mod4Mask .|. shiftMask, xK_q     ), spawn "xfce4-session-logout")
       , ((mod4Mask, xK_o                   ), spawn "google-chrome")
-      , ((mod4Mask, xK_u                   ), spawn "setxkbmap -option ctrl:nocaps")
+      -- Don't need this hack anymore; instead, just add XKBOPTIONS="ctrl:nocaps" to /etc/default/keyboard!
+      --, ((mod4Mask, xK_u                   ), spawn "setxkbmap -option ctrl:nocaps")
       ]
