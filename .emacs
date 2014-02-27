@@ -15,7 +15,6 @@
 (setq scroll-step 1)
 (setq scroll-conservatively 10000)
 (setq scroll-preserve-screen-position t)
-(mouse-wheel-mode -1)
 
 ; Leave search highlighting on, like vim does
 (setq lazy-highlight-cleanup nil)
@@ -173,11 +172,11 @@
   (setq slime-default-lisp 'mit-scheme)
   (add-hook 'scheme-mode-hook 'mit-scheme-slime-mode-init))
 
-; Setup git-gutter
-(cond ((> emacs-major-version 22)
-       (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-git-gutter"))
-       (require 'git-gutter)
-       (global-git-gutter-mode +1)))
+;; Setup git-gutter
+;(cond ((> emacs-major-version 22)
+;       (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-git-gutter"))
+;       (require 'git-gutter)
+;       (global-git-gutter-mode +1)))
 
 ; Coffeescript mode
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/coffee-mode"))
