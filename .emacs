@@ -2,7 +2,8 @@
 
 ; Set the color theme
 (cond ((> emacs-major-version 23)
-       (load-theme 'tango-dark))
+       ;(load-theme 'tango-dark))
+       (load-theme 'monokai t))
       (t (add-to-list 'load-path (expand-file-name "~/.emacs.d/color-theme-6.6.0/"))
 	    (require 'color-theme)
 	    (eval-after-load "color-theme"
