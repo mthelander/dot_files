@@ -1,10 +1,10 @@
-(add-to-list 'load-path (expand-file-name "~/.emacs.d"))
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/lisp/themes/"))
 
 ; Set the color theme
 (cond ((> emacs-major-version 23)
        ;(load-theme 'tango-dark))
        (load-theme 'monokai t))
-      (t (add-to-list 'load-path (expand-file-name "~/.emacs.d/color-theme-6.6.0/"))
+      (t (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/color-theme-6.6.0/"))
 	    (require 'color-theme)
 	    (eval-after-load "color-theme"
 	      '(progn
@@ -141,7 +141,7 @@
 
 ; SLIME mode
 (setq inferior-lisp-program scheme-program-name)
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/slime-2013-04-05"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/slime-2013-04-05"))
 
 ; Suggested by mit-scheme-swank
 (when (require 'slime nil t)
@@ -175,7 +175,7 @@
 
 ;; Setup git-gutter
 ;(cond ((> emacs-major-version 22)
-;       (add-to-list 'load-path (expand-file-name "~/.emacs.d/emacs-git-gutter"))
+;       (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/emacs-git-gutter"))
 ;       (require 'git-gutter)
 ;       (global-git-gutter-mode +1)))
 
@@ -187,6 +187,6 @@
 (defalias 'perl-mode 'cperl-mode)
 
 ; Rainbow delimiters
-(add-to-list 'load-path (expand-file-name "~/.emacs.d/rainbow-delimiters"))
+(add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp/rainbow-delimiters"))
 (require 'rainbow-delimiters)
 (global-rainbow-delimiters-mode)
