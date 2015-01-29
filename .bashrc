@@ -115,6 +115,7 @@ GREEN="\[\033[0;32m\]"
 export EXTHOME=~/.local/share/gnome-shell/extensions
 export EDITOR=vim
 export PSQL_EDITOR=vim
+export PATH="$PATH:$HOME/bin"
 
 function gitopen() {
     if [ -z $1 ]; then # Open all changed files
