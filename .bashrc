@@ -133,6 +133,16 @@ function gitopen() {
     fi
 }
 
+
+# OLD?
+#function gitopen() {
+#    if [ -z $1 ]; then # Open all changed files
+#        eval "$EDITOR \$(git status --porcelain --untracked-files=all | sed -re 's/^.+\s//')"
+#    else # All files changed in the last number of specified commits
+#        eval "$EDITOR \$(git show -$1 --name-only --oneline | sed -re '/\s/d')"
+#    fi
+#}
+
 # Open in $EDITOR all files with merge conflicts
 function gitmergeopen() {
     eval "$EDITOR \$(git diff --name-status --diff-filter=U | sed 's/^.+\s//')"
