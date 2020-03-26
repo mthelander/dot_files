@@ -1,0 +1,68 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/mthelander/nand2tetris/nand2tetris/projects/" . "01/")
+ ("/Users/mthelander/work/rtkconnect/app/" . "models/")
+ ("/Users/mthelander/work/rtkconnect/" . "app/")
+ ("/Users/mthelander/work/rtkconnect/lib/" . "exporter/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/mthelander/nand2tetris/nand2tetris/projects/01/"
+ "/Users/mthelander/nand2tetris/nand2tetris/tools/"
+ "/Users/mthelander/"
+ "/Users/mthelander/work/rtkconnect/app/models/"
+ "/Users/mthelander/work/rtkconnect/lib/exporter/"
+ "/Users/mthelander/work/rtkconnect/config/"
+ "/Users/mthelander/work/rtkconnect/lib/importer/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "And.hdl"
+ "And.tst"
+ "And.cmp"
+ "JackCompiler.sh"
+ "Assembler.bat"
+ "eidr.org"
+ "bar.org"
+ "reported_title.rb"
+ "title.rb"
+ "xref_exporter.rb"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/mthelander/nand2tetris/nand2tetris/projects/06/" (24135 13217 0 0) "rect/" "pong/" "max/" "assembler.lisp~" "assembler.lisp" "add/" "../" "./")
+
+ ("/Users/mthelander/nand2tetris/nand2tetris/projects/01/" (22667 49760 0 0) "Xor.tst" "Xor.hdl" "Xor.cmp" "Or8Way.tst" "Or8Way.hdl" "Or8Way.cmp" "Or16.tst" "Or16.hdl" "Or16.cmp" "Or.tst" "Or.hdl" "Or.cmp" "Not16.tst" "Not16.hdl" "Not16.cmp" "Not.tst" "Not.hdl" "Not.cmp" "Mux8Way16.tst" "Mux8Way16.hdl" "Mux8Way16.cmp" "Mux4Way16.tst" "Mux4Way16.hdl" "Mux4Way16.cmp" "Mux16.tst" "Mux16.hdl" "Mux16.cmp" "Mux.tst" "Mux.hdl" "Mux.cmp" "DMux8Way.tst" "DMux8Way.hdl" "DMux8Way.cmp" "DMux4Way.tst" "DMux4Way.hdl" "DMux4Way.cmp" "DMux.tst" "DMux.hdl" "DMux.cmp" "And16.tst" "And16.hdl" "And16.cmp" "And.tst" "And.hdl" "And.cmp" "../" "./")
+
+ ("/Users/mthelander/nand2tetris/nand2tetris/projects/" (22667 49766 0 0) "demo/" "13/" "12/" "11/" "10/" "09/" "08/" "07/" "06/" "05/" "04/" "03/" "02/" "01/" "00/" "../" "./")
+
+ ("/Users/mthelander/nand2tetris/nand2tetris/projects/00/" (22667 49760 0 0) "file.txt" "../" "./")
+
+ ("/Users/mthelander/nand2tetris/nand2tetris/" (24083 65261 0 0) "tools/" "projects/" ".git/" "../" "./")
+
+ ("/Users/mthelander/nand2tetris/nand2tetris/tools/" (22667 49768 0 0) "VMEmulator.sh" "VMEmulator.bat" "TextComparer.sh" "TextComparer.bat" "OS/" "JackCompiler.sh" "JackCompiler.bat" "HardwareSimulator.sh" "HardwareSimulator.bat" "CPUEmulator.sh" "CPUEmulator.bat" "builtInVMCode/" "builtInChips/" "bin/" "Assembler.sh" "Assembler.bat" ".DS_Store" "../" "./")
+
+ ("/Users/mthelander/" (23719 31806 0 0) "~$test_data.xls" "workflow.org~" "workflow.org" "worker.log" "work/" "WAT_SCHEMA_FILES_ARE_WRONG.txt" "wat.pl" "validation-results2.txt" "validation-results.txt" "v2-machines" "up.sql" "up-new-table.sql" "up-linfulcrum-2441.sql" "up-fix-triggers.sql" "up-fix-foreign-keys.sql" "uk.todo~" "uk.todo" "transfer-tasks.org~" "transfer-tasks.org" "todo.org~" "todo.org" "tmux-client-2135.log" "title_matching_page_performance.pl" "threeword.scm~" "threeword.scm" "the-query.sql" "testing2" "testing" "test_file.txt" "test_data.xls" "test3.py" "test2.sql" "test2.scala" "test2.py" "test.sql" "test.scm" "test.scala" "test.rb" "test.py" "test.pl" "test.parquet" "test.org" "test.clj" "test-email.org" "test" "temp.org~" "temp.org" "temp-ingestion-prod.pem" "taxes_2017/" "tasks" "table-defs.sql" "stuff.org" "stuff/" "step_2_5.sql" "ssh-tunnel.sh" "ssh-tunnel-prod.sh" "sql/" "speech_synth.js" "sony_report_list.csv" "sony_fields_pruned.csv" "sony_fields.csv" "snowflake_data.sql~" "snowflake_data.sql" "shows.org" "shell-engine.org" "setup_alluxio.sh" "second_largest.scm~" "second_largest.scm" "second_largest.py~" "second_largest.py" "scratch.sql" "saml2aws" "run-athena.sh" "rtk-todo.org~" "rtk-todo.org" "require.js" "reprocess.sh" "recreate-tables.sql" "race_dates.csv" "query_live" "query_dev" "QLIKSENSE-PROGRESS.txt" "qlikauth.org" "Public/" "projections_create_tables.sql" "projections-validation-query.sql" "presto-jdbc-0.187.jar" "Pictures/" "pgdata/" "pdr_template.sql" "pdr_cdr_tables.txt" "owner_group_xref_1234567890.txt" "out.txt" "openssl-osx-ca" "old_ssh/" "old_cdr.sql" "odeitmp-70.patch" "odeitmp-120-dde-and-vod-automatches.csv" "odeitmp-115-before.log" "odeitmp-115-after.log" "odeimp-822.out" "odefeat-1694-unmatched-titles.csv" "odefeat-1694-unmatched-titles-clean.csv" "odefeat-1694-automatching.org~" "odefeat-1694-automatching.org" "notebooks/" "ne_2" "ne_1" "Music/" "msg.org" "Movies/" "mjt_cdr_pdr_template.sql" "mjt.pem" "mjt-linfulcrum-1354-test-cable-network.csv" "mjt-linfulcrum-1354-test-broadcast-network.csv" "missing_owners.csv" "minion_labor_shifts.py~" "message.txt" "mc_changes_redux.csv" "mc_changes_final.csv" "mc_changes.csv" "marathon.html" "make-sql.rb" "machine.config" "long-run-schedule.txt" "linproject-3378.org" "lingeneral-3378.org" "linfulcrum-39.org" "linfulcrum-39-test-file-real.csv" "LINFULCRUM-1509-up.sql" "LINFULCRUM-1494-create-projection-tables.sql" "linear_work_progress" "linear.txt~" "linear.txt" "LIN-4307-create-new-projection-table.sql" "Library/" "karatsuba.rb~" "karatsuba.rb" "items_data_pull_odefeat_2176.csv" "integerArray.txt" "helios-steps.org~" "helios-steps.org_archive" "helios-steps.org" "helios-changes.patch" "held_rts.csv" "halting.py" "golang/" "goals.org~" "goals.org" "gearman-workflow.txt." "gearman-testing-odeint-2125.md" "gearman" "fulcrum_station_d.sql" "foxyproxy-settings.xml" "foobar/" "foo.xls" "foo.scm" "foo.rb" "foo.py" "foo" "five_week.sql" "fitbit-list.txt" "fitbit-hack.js" "fitbit-downloaded.txt" "final_pdr_cdr.sql" "extract_notebook.py" "extract-jupyter-sql.py" "expected_output.csv" "etv.org~" "etv.org" "emr-config.json" "email.org" "eidr_results.html" "eidr.org~" "eidr.org" "dynamic_demo.sql" "drp2.js" "drp1.js" "Downloads/" "dot_files/" "Documents/" "doctor.rb" "digidown_ftp" "dev_reported_series.csv" "Desktop/" "dde_changes.csv" "db7037.py" "day4.org~" "day4.org" "database_old_rake.rb" "data/" "cs-voltron-v1-tables.sql" "create-projections-tables.sql" "create-notebook.py" "connect_programs.csv" "connect-issues.org" "client" "chunks.scm" "chunks.py~" "chunks.py" "changes.csv" "cert/" "cdr_template.sql" "carly_test.py~" "carly_test.py" "cacert.pem" "brooksee.txt" "blink_tables.sql" "Blink_Ibis_Intro.ipynb" "bin/" "bigdata.org~" "bigdata.org" "BIG_FILE.csv" "becca_pdr_fulcrum_2.sql" "becca_pdr_fulcrum.sql" "bar" "bak" "b" "autoingest_dev_run.txt" "Applications/" "all_held_reported_titles.csv" "airflow/" "a" "3-tunnel.sh" "20180827_cdr_pdr.sql" "2016.11.01-2016.11.30-TELSTRA-SONY-ROYALTY.xlsx" "1782-planning.org" ".zshrc" ".zsh_history" ".zsh-update" ".zoomus/" ".zcompdump-100907MB-5.0.8" ".xmonad/" ".xmobarrc" ".vscode/" ".vimrc" ".viminfo" ".vim/" ".Trash/" ".tmux.conf" ".tig_history" ".templateengine/" ".tasks.swp" ".swp" ".swo" ".swn" ".swm" ".swl" ".swk" ".swj" ".swi" ".swh" ".superset/" ".subversion/" ".ssh/" ".sqlite_history" ".snowflake_data.sql.swp" ".slime-history.eld" ".scripts/" ".scheme.init" ".scala_history" ".saml2aws" ".Rhistory" ".RData" ".rbenv/" ".python_history" ".psqlrc" ".psql_history" ".pry_history" ".profile" ".pgvm/" ".pgpass" ".oracle_jre_usage/" ".omnisharp/" ".nuget/" ".npm/" ".node-gyp/" ".NERDTreeBookmarks" ".message_contents" ".matplotlib/" ".long-run-schedule.txt.swp" ".local/" ".linproject-3378.org.swp" ".lesshst" ".jupyter/" ".ipython/" ".ipynb_checkpoints/" ".gvimrc" ".gsutil/" ".gradle/" ".gitignore" ".gitconfig" ".gem/" ".emacs.d/" ".emacs" ".editrc" ".DS_Store" ".dotnet/" ".dot_files_old/" ".docker/" ".cups/" ".config/" ".condarc" ".conda/" ".CFUserTextEncoding" ".cache/" ".bundle/" ".boto" ".bashrc" ".bash_sessions/" ".bash_profile-anaconda3.bak" ".bash_profile" ".bash_history" ".aws/" ".atom/" ".anaconda/" ".account" "#test2.scm#" "#karatsuba.scm#" "#foo.org#" "#chunks.scm#" "#bar.org#~" "#bar.org#" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/lib/importer/" (22427 51265 0 0) "title_importer.rb" "source_file_retriever.rb" "runner.rb" "owner_importer.rb" "file_transporter.rb" "copier.rb" "comscore_transfer_runner.rb" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/config/" (22427 31325 0 0) "unicorn.rb" "rubocop.yml" "rubocop-todo.yml" "routes.rb" "newrelic.yml" "locales/" "initializers/" "ftp_comscore.yml.sample" "ftp.yml.sample" "ftp.yml" "environments/" "environment.rb" "deploy.rb" "database.yml.sample" "database.yml" "cucumber.yml" "compass.rb" "boot.rb" "application.rb" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/lib/exporter/" (22426 19842 0 0) "xref_exporter.rb" "voltron_exporter.rb" "transporter.rb" "title_exporter.rb" "runner.rb" "owners_xref_exporter.rb" "owner_exporter.rb" "canonical_xref_exporter.rb" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/app/models/" (22426 19842 0 0) "user.rb" "tsearch_cleaner.rb" "title.rb" "source.rb" "series.rb" "reported_title.rb" "reported_series.rb" "reported_owner.rb" "reason_code.rb" "priority_title.rb" "owner.rb" "linear_genre.rb" "ignored_title.rb" "ignored_reported_title.rb" "file_info.rb" "exportable_model.rb" "export.rb" "dynamic_match.rb" "digital_metadata_xref.rb" "abstract_title.rb" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/app/" (22367 18110 0 0) "views/" "services/" "serializers/" "reports/" "mse/" "models/" "mailers/" "helpers/" "controllers/" "assets/" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/" (22385 20854 0 0) "vendor/" "tmp/" "spec/" "script/" "README.md" "Rakefile" "log/" "lib/" "installing_rbenv_and_ruby.md" "Guardfile" "Gemfile.lock" "Gemfile" "features/" "doc/" "db/" "config.ru" "config/" "Capfile" "autotest/" "app/" ".ruby-version" ".rubocop.yml" ".rspec" ".powrc" ".gitignore" ".git/" ".autotest" "../" "./")
+
+ ("/Users/mthelander/work/rtkconnect/lib/" (22367 18111 0 0) "tasks/" "reviver.rb" "reviver/" "priority_title_creator.rb" "importer.rb" "importer/" "hoptoad_logging.rb" "exporter.rb" "exporter/" "exact_title_matcher.rb" "automatcher.rb" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

@@ -162,16 +162,20 @@ endif
 
 map ,b :BufExplorer<cr>
 map ,n :NERDTree<cr>
-map ,t :!rspec %<cr>
 
 set number
 set hls
-set tabstop=2
+set tabstop=4
 set autoindent
 set smartindent
-command W w
-command Wa wa
-command Wq wq
-nore ; :
-map :%s/ \+$//g<CR>
-map ,r :!ruy %<CR>
+command! W w
+command! Wa wa
+command! Wq wq
+"nore ; :
+map ,wt :%s/ \+$//g<CR>
+map ,r :!ruby %<CR>
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+nnoremap <F5> :GundoToggle<CR>
+"set signcolumn=yes
+let g:gitgutter_sign_column_always=1
+let g:scala_scaladoc_indent = 1 " recommended per vim-scala

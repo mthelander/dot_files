@@ -49,21 +49,27 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
 fi
-unset color_prompt force_color_prompt
 
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+export GIT_PS1_SHOWDIRTYSTATE=1
+export PS1="\[\033[0;32m\]\$(date +%H:%M) \[\033[1;34m\][\u@\h \W]\[\033[1;33m\] \$(__git_ps1 '(%s)')\[\033[0m\]\$ "
+#if [ "$color_prompt" = yes ]; then
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+#else
+#    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+#fi
+#unset color_prompt force_color_prompt
+#
+## If this is an xterm set the title to user@host:dir
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+#    ;;
+#*)
+#    ;;
+#esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
@@ -79,7 +85,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias emacs='emacs -nw'
+alias emacs='emacs-24.5 -nw'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -115,17 +121,29 @@ GREEN="\[\033[0;32m\]"
 export EXTHOME=~/.local/share/gnome-shell/extensions
 export EDITOR=vim
 export PSQL_EDITOR=vim
-export PATH="$PATH:$HOME/bin"
+export PATH="$PATH:$HOME/bin:/Users/mthelander/Downloads/google-cloud-sdk/bin:$HOME/.local/bin"
 
 function gitopen() {
     if [ -z $1 ]; then # Open all changed files
-        eval "$EDITOR \$(git status --porcelain --untracked-files=all | sed -re 's/^.+\s//')"
+        eval "$EDITOR \$(git status --porcelain --untracked-files=all | awk '{print \$2}')"
     else # All files changed in the last number of specified commits
-        eval "$EDITOR \$(git show -$1 --name-only --oneline | sed -re '/\s/d')"
+        #eval "$EDITOR \$(git show -$1 --name-only --oneline | sed '/\s/d')"
+        #eval "$EDITOR \$(git diff-tree --no-commit-id --name-only -r HEAD..HEAD~$(echo $(($1-1))))"
+        eval "$EDITOR \$(git diff-tree --no-commit-id --name-only -r HEAD..HEAD~$1)"
     fi
 }
 
 # Open in $EDITOR all files with merge conflicts
 function gitmergeopen() {
-    eval "$EDITOR \$(git diff --name-status --diff-filter=U | sed -re 's/^.+\s//')"
+    eval "$EDITOR \$(git diff --name-status --diff-filter=U | sed 's/^.+\s//')"
 }
+export PATH="$HOME/.rbenv/bin:$PATH"
+export GOPATH=$HOME
+eval "$(rbenv init -)"
+alias vim=/usr/local/Cellar/vim/7.4.1910/bin/vim
+export PIPENV_QUIET=1
+
+alias jack='ack --ignore-dir test --ignore-dir build'
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
